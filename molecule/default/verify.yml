@@ -1,0 +1,13 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Run minikube version
+      ansible.builtin.command: minikube version
+      register: minikube_version_output
+      changed_when: false
+
+    - name: Validate minikube version rc
+      ansible.builtin.assert:
+        that: minikube_version_output.rc == 0

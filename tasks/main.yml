@@ -1,0 +1,13 @@
+---
+- name: Download minikube
+  become: true
+  become_user: root
+  ansible.builtin.get_url:
+    url: "https://github.com/kubernetes/minikube/releases/download/\
+      {{ minikube_version }}/minikube-linux-amd64"
+    dest: /usr/bin/minikube
+    checksum: "sha256:https://github.com/kubernetes/minikube/releases/download/\
+      {{ minikube_version }}/minikube-linux-amd64.sha256"
+    owner: root
+    group: root
+    mode: '0755'

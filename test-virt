@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dir=$(mktemp -d)
+virtualenv $dir
+. $dir/bin/activate
+pip3 install -r requirements.txt
+
+make lint test
+result=$?
+
+deactivate
+rm -rf $dir
+
+exit $result

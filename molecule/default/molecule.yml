@@ -1,0 +1,32 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: centos7
+    image: centos:7
+  - name: debian11
+    image: debian:11
+  - name: debian12
+    image: debian:12
+  - name: fedora39
+    image: fedora:39
+  - name: fedora40
+    image: fedora:40
+  - name: fedora41
+    image: fedora:41
+  - name: ubuntu2004
+    image: ubuntu:20.04
+  - name: ubuntu2204
+    image: ubuntu:22.04
+  - name: ubuntu2304
+    image: ubuntu:23.04
+  - name: ubuntu2310
+    image: ubuntu:23.10
+  - name: ubuntu2404
+    image: ubuntu:24.04
+provisioner:
+  name: ansible
+verifier:
+  name: ansible

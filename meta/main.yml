@@ -1,0 +1,27 @@
+---
+galaxy_info:
+  author: devops13242
+  role_name: minikube
+  description: Install minikube.
+  license: Apache-2.0
+  min_ansible_version: '2.15'
+
+  platforms:
+    - name: EL
+      versions:
+        - "7"
+    - name: Debian
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - minikube
+    - system
+
+dependencies: []
